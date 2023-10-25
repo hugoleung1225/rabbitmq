@@ -1,0 +1,22 @@
+server:
+  port: 3000
+
+spring:
+  rabbitmq:
+    host: 192.168.118.128
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+
+    #listener:
+    #  simple:
+    #    # auto ack ( other options  = manual  / none )
+    #    acknowledge-mode: auto
+    #    retry:
+    #      ####开启消费者异常进行重试
+    #      enabled: true
+    #      ####最大重试次数
+    #      max-attempts: 5
+    #      ####重试间隔次数
+    #      initial-interval: 3000
