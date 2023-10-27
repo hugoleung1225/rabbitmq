@@ -1,0 +1,13 @@
+server:
+  3001
+
+spring:
+  rabbitmq:
+    host: 192.168.118.128
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    # 消息确认（ACK）
+    publisher-confirm-type: correlated #确认消息已发送到交换机(Exchange)
+    publisher-returns: true #确认消息已发送到队列(Queue)

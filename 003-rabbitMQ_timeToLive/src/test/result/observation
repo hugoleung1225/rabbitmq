@@ -1,0 +1,8 @@
+1. if using set message expiration and the head msg at queue doesn't consume,
+    the delaied msg will not expired
+
+2. using queue ttl (time-to-live) can auto expire the msgs
+
+3. deadLetterExchange, deadLetterRoutingKey works successfully
+
+4. RabbitmqConfig with @Configuration auto create element on rabbitMq if it doesn't exist
