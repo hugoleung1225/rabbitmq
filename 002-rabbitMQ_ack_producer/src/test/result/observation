@@ -1,0 +1,22 @@
+1. if consumer consumes message and producer didn't receive ack signal,
+    the message cannot complete
+2. if consumer shut down,the message becomes ready state again
+3. ack mode was set at application side ( application.yml )
+
+---------------------------------------
+4. 2 ack mode :
+4a) producer and exchange
+//class implements RabbitTemplate.ConfirmCallback,RabbitTemplate.ReturnsCallback
+
+//override method confirm
+4b) queue and consumer
+
+4c) TODO : exchange and queue
+--> don't know because it's auto binding set at RabbitMq server
+
+
+---------------------------------------------
+
+5. prevent duplicate message at consumer side
+5a) store messsage id : msg pair at redis with limited time, bypass if already exist
+    redisUtil.set(messageId,msg,10L);

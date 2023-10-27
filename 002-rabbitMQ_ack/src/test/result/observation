@@ -1,0 +1,4 @@
+1. if consumer consumes message and producer didn't receive ack signal,
+    the message cannot complete
+2. if consumer shut down,the message becomes ready state again
+3. ack mode was set at application side ( application.yml )
